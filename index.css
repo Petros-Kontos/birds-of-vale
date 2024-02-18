@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #191919;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: #191919;
+    position: fixed;
+    width: 100%;
+    height: 4%;
+    padding: 8px 24px;
+    transition: background-color 1s;
+    z-index: 1000;
+}
+.social {
+    padding-right: 2.5%;
+}
+.social a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    margin: 10px 10px;
+}
+.social a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.top-photo-container {
+    display: flex;
+    justify-content: center; /* Center the images in the container */
+    width: 100%;
+}
+.top-photo-container img {
+    width: 50%; /* Each image takes up half of the container's width */
+}
+.middle-photo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 727px;
+    padding: 64px 0px;
+    gap: 16px;
+    background-image: url(./assets/rehearsal.png);
+}
+.bottom-photo-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap onto the next line */
+    justify-content: center; /* Center the images in the container */
+    width: 100%;
+}
+.bottom-photo-container img {
+    width: 50%; /* Each image takes up half of the container's width */
+}
+.bottom-photo-container iframe {
+    position: absolute;
+    top: 50%; /* 50% from the top of the image container */
+    left: 50%; /* 50% from the left of the image container */
+    transform: translate(-50%, -50%); /* To center the iframe */
+    width: 50%; /* Set the width of the YouTube embed */
+    height: 50%; /* Set the height of the YouTube embed */
+    z-index: 10; /* Ensure the iframe appears above the images */
+}
+.album {
+    height: 86%;
+    width: 70%;
+}
+.half-width {
+    width: 50%;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #191919;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+.youtube{
+    max-width: 80%;
+}
+/* Media query for mobile view */
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 5%;}
+}
