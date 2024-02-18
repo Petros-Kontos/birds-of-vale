@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     margin: 0;
     background-color: #191919;
+    align-items: center;
 }
 header {
     display: flex;
@@ -50,6 +51,10 @@ header {
     gap: 16px;
     background-image: url(./assets/rehearsal.png);
 }
+.youtube {
+    height: 50em;
+    width: 70%;
+}
 .bottom-photo-container {
     position: relative;
     display: flex;
@@ -59,15 +64,6 @@ header {
 }
 .bottom-photo-container img {
     width: 50%; /* Each image takes up half of the container's width */
-}
-.bottom-photo-container iframe {
-    position: absolute;
-    top: 50%; /* 50% from the top of the image container */
-    left: 50%; /* 50% from the left of the image container */
-    transform: translate(-50%, -50%); /* To center the iframe */
-    width: 50%; /* Set the width of the YouTube embed */
-    height: 50%; /* Set the height of the YouTube embed */
-    z-index: 10; /* Ensure the iframe appears above the images */
 }
 .album {
     height: 86%;
@@ -91,11 +87,12 @@ footer {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
 }
-.youtube{
-    max-width: 80%;
-}
 /* Media query for mobile view */
 @media (max-width: 600px) {
     body {
         padding-bottom: 5%;}
+        .youtube {
+            height: 9em;
+            width: 16em;
+        }
 }
